@@ -53,8 +53,8 @@
             <column name="iduser" type="INT">
                 <constraints nullable="true" primaryKey="true" unique="true"/>
             </column>
-            <column name="p_idpermissions" type="INT">
-                <constraints nullable="true" primaryKey="false" unique="false"/>
+            <column name="idpermissions" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
             </column>
         </createTable>
     </changeSet>
