@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    <changeSet author="AZ" id="usertable">
+        <createTable tableName="user">
+            <column name="iduser" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="lastname" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="age" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="username" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="password" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="idaddress" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="AZ" id="direcciontable">    
+        <createTable tableName="address">
+            <column name="idaddress" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="street" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="number" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="zp" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            
+        </createTable>
+    </changeSet>
+
+    <changeSet author="AZ" id="usertypetable">
+        <createTable tableName="user_permissions">
+            <column name="iduser" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="p_idpermissions" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="AZ" id="permisotable">
+        <createTable tableName="permissions">
+            <column name="idpermissions" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(20)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    
+
+</databaseChangeLog>

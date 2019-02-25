@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    
+
+    <changeSet author="AZ" id="addForeignKeyConstraint-User_Address">
+        <addForeignKeyConstraint baseColumnNames="idaddress"
+                baseTableName="user"
+                constraintName="fk_user_address"
+                referencedColumnNames="idaddress"
+                referencedTableName="address"/>
+    </changeSet>
+
+    <changeSet author="AZ" id="addForeignKeyConstraint-userusertype">
+        <addForeignKeyConstraint baseColumnNames="iduser"
+                baseTableName="user"
+                constraintName="fk_user_permissions__user"
+                referencedColumnNames="iduser"
+                referencedTableName="user_permissions"/>
+    </changeSet>
+
+    <changeSet author="AZ" id="addForeignKeyConstraint-algo">
+        <addForeignKeyConstraint baseColumnNames="idpermissions"
+                baseTableName="permissions"
+                constraintName="fk_user_permissions_permissions"
+                referencedColumnNames="idpermissions"
+                referencedTableName="user_permissions"/>
+    </changeSet>  
+
+</databaseChangeLog>
