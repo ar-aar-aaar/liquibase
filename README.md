@@ -2,6 +2,10 @@
 # By Aaron Zepeda
 ## Source Control for your database
 
+This is something extra with gitflow
+
+## Corrijan mi error, saludos
+
 Es una libreria opensource para el manejo y ejecución de cambios en base de datos.
 
 ## Descripción
